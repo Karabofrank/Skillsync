@@ -1,3 +1,13 @@
+
+import firebase_admin
+from firebase_admin import credentials
+from firebase_admin import firestore
+cred = credentials.Certificate(r"./Firbase\ key/skillsink-9567a-firebase-adminsdk-fbsvc-2e87c26293.json")
+firebase_admin.initialize_app(cred)
+
+db = firestore.client()
+
+
 from googleapiclient.discovery import build
 from google.oauth2 import service_account
 import json
@@ -19,6 +29,7 @@ def get_user_token(email):
         return None
     
 print(json.dumps(request, sort_keys=True, indent=4))
+
 # User ID dictionary
 user_id = {"Name": "",
            "Email": "",
