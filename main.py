@@ -1,16 +1,15 @@
 import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import firestore
-cred = credentials.Certificate(r"./Firbase\ key/skillsink-9567a-firebase-adminsdk-fbsvc-2e87c26293.json")
-firebase_admin.initialize_app(cred)
-
-db = firestore.client()
-
-
 from googleapiclient.discovery import build
 from google.oauth2 import service_account
 import json
 import click
+
+cred = credentials.Certificate(r"./Firbase\ key/skillsink-9567a-firebase-adminsdk-fbsvc-2e87c26293.json")
+firebase_admin.initialize_app(cred)
+
+db = firestore.client()
 
 scopes = ["https://www.googleapis.com/auth/calendar", "https://www.googleapis.com/auth/calendar.events"]
 sa_file = 'service-account.json'
