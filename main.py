@@ -11,3 +11,9 @@ meeting_id ={
     "time": "",
     "status": ""
 }
+
+workshop_id ={
+    "resource_id": "",
+    "topic": "",
+    "date_requested": ""
+}
